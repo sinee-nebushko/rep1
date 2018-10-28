@@ -1,6 +1,17 @@
-a=input('Введите слово:  ')
-b=a[::-1]
+a = input('Введите строку:  ')
+a = ''.split(a)
+
+line = []
+for i in range(len(a)):  # проверка
+    ch = a[i]
+    if ch.isalpha():
+        ch = ch.lower()  # А вДрУг 2007 вернется
+        line.append(ch)
+
+a = ''.join(line)
+b = a[::-1]
+
 if a == b:
-    print(a, ' - это палиндром')
+    print(' Это палиндром ')
 else:
-    print(a,' не палиндром')
+    print(' Это не палиндром ')

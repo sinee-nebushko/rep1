@@ -9,5 +9,6 @@ while numb_list[i] < n / 2:
         if numb_list[j] % numb_list[i] == 0:
             del numb_list[j]
     i += 1
-numb_str = ', '.join(map(str,numb_list))
-print('Меньше числа введенного числа',n,' следующие простые числа: ',numb_str)
+numb_str = ', '.join(map(str, numb_list))
+
+print('В промежутке от 0 до', n, ' находятся следующие простые числа: ', numb_str)
