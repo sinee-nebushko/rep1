@@ -30,7 +30,7 @@ for k in range(0, len(ch)):
 text_lines = text.splitlines()
 d = int(len(text_lines)//2)
 
-part_1 = text_lines[:d:]
+part_1 = text_lines[:d:]  # второе двоеточие необязательно, просто text_lines[:d]
 part_2 = text_lines[d:]
 
 rewr_text = part_2+part_1

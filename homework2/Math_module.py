@@ -1,14 +1,17 @@
 import math
-sp=[]
-k=0
-while k<3:
-    st=int(input('Введите сторону треугодьника  '))
-    sp.append(st)
-    k+=1
 
-a=sp[0]
-b=sp[1]
-c=sp[2]
+# обращай внимание на предупреждения PEP8
+
+sp = []
+k = 0
+while k < 3:
+    st = int(input('Введите сторону треугодьника  '))
+    sp.append(st)
+    k += 1
+
+a = sp[0]
+b = sp[1]
+c = sp[2]
 if a + b > c and b + c > a and a + c > b:
     cos1 = (a * a + b * b - c * c) / (2 * a * b)
     cos2 = (a * a + c * c - b * b) / (2 * a * c)
