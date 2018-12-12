@@ -4,7 +4,7 @@ p=['bar', 'car', 'far', 'war', '0ar', '$ar']
 n = ['bag', 'for', 'star', 'care']
 
 for x in p + n:
-    match = fullmatch('(\w|[$])ar', x)
+    match = fullmatch('(\w|[$])ar', x)  # .ar
     if match:
         print(x, match, match.group(0), match.group(1))
     else:

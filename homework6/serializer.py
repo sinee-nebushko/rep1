@@ -386,11 +386,11 @@ class Aggregate(Serializer, metaclass=AggregateMeta):
 class Boolean(Serializer, hint=bool):
     @classmethod
     def dump(cls, value: bool, io: BinaryIO) -> None:
-        io.write(pack('>f', value))
+        io.write(pack('>f', value))  # правильный формат '>?'
     
     @classmethod
     def load(cls, io: BinaryIO) -> bool:
-        value, = unpack('>f', io.read(4))
+        value, = unpack('>f', io.read(4))  # правильный формат '>?'
         if value > 0:
             return True
         else:
@@ -400,7 +400,7 @@ class Boolean(Serializer, hint=bool):
 class Bytes(Serializer, hint=bytes):
     @classmethod
     def convert(cls, value: Any) -> bytes:
-        assert isinstance(value, (bytes, bytes, bytearray))
+        assert isinstance(value, (bytes, bytes, bytearray))  # лишний bytes :) достаточно isinstance(value, (bytes, bytearray))
         if isinstance(value, bytes):
             return value
         else:
