@@ -1,6 +1,11 @@
-from re import fullmatch
+from re import sub
 
-p = ['a', 'an', 'the']
 str = '''Now you can watch the video again and test your listening skills without the text.
       Reading is a very important language learning skill. 
       It helps you improve all parts of the English language – vocabulary, spelling, grammar, and writing.'''
+
+a = sub('\sa\s', ' ', str)
+a = sub('\san\s', ' ', a)
+a = sub('\sthe\s',' ', a)
+
+print(a)
