@@ -1,5 +1,4 @@
 import graphics
-import math
 from graphics import Point
 
 

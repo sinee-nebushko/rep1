@@ -1,7 +1,10 @@
-fron sqlite3 import connect
+from sqlite3 import connect
 
-database= connect('дорп.db')
+database = connect('дорп.db')
 
 database.execute(
-    "INSERT INTO persons VALUES('John Dow', 42, 'loafer')"
+    "INSERT INTO persons VALUES('elisabeth', 98, 'queen')"
+    "INSERT INTO persons VALUES('elisabeth', 98, 'queen')"
 )
+
+database.commit()

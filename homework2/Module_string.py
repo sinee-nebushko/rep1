@@ -1,6 +1,6 @@
 import string
-t = open(r"C:\Users\Виктория\PycharmProject\rep1\text.txt", 'rt')
-text = t.read()
+with open(r"C:\Users\Виктория\PycharmProject\rep1\text.txt", 'rt') as t:
+    text = t.read()
 
 wordlist = text.split()
 words = []

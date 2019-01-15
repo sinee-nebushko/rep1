@@ -20,7 +20,7 @@ for k in range(1, 10):
     # поэтому если функция и переменные находятся в разных модулях,
     # их действительно не будет видно даже с global
 
-    def print_field():
+    def print_field():x
         print('+---+---+---+')
         print('| %s |' % ' | '.join(field[0]))
         print('+---+---+---+')
@@ -29,17 +29,13 @@ for k in range(1, 10):
         print('| %s |' % ' | '.join(field[2]))
         print('+---+---+---+')
 
+x = int(input('Введите строку:  '))  # Просим координаты для Х
+y = int(input('Введите столбец:  '))
 
     def make_turn():
-        global x
-        global y
-        x = int(input('Введите строку:  '))  # Просим координаты для Х
-        y = int(input('Введите столбец:  '))
 
 
-    def check_range():
-        global x
-        global y
+    def check_range(x, y):
         if x < 1 or x > 3 or y < 1 or y > 3 or field[x - 1][y - 1] != ' ':
             print('Данная ячейка занята или не существует.')  # Всякое бывает. Предупреждаем.
             x = int(input('Введите другую строку:  '))  # Просим другие координаты для Х

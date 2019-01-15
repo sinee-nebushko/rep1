@@ -33,9 +33,9 @@ def join(x, y):
     return str(x)+str(y)
 
 
-def union(s):
+def union(s,seq):
     s = []
-    s = set()
+    s = set(seq)
     return s
 
 
